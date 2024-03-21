@@ -181,7 +181,7 @@ Exemplo:
 Número lido = 123
 Número gerado = 321*/
 
-int main () {
+/*int main () {
     int a, b, c;
     printf("Digite um numero: ");
     scanf("%d", &a);
@@ -192,4 +192,51 @@ int main () {
     b = b * 10 + c%10;
     printf("%d", b);
 }
+*/
 
+/*16 - Escreva um programa que leia um número inteiro e mostre a multiplicação e a
+divisão desse número por dois (utilize os operadores de deslocamento de bits).*/
+
+/*int main () {
+    int a, b;
+    printf("Digite um numero: ");
+    scanf("%d", &a);
+    printf("A multipicacao do numero %d por 2, vale: %d\n", a, b = a << 1);
+    printf("A divisao do numero %d por 2, vale: %d", a, b = a >> 1);
+}
+*/
+
+/*17 - Escreva um programa que leia um número inteiro e mostre o seu complemento
+bit a bit.*/
+
+/*int main () {
+    char x, y;
+    printf("Digite um numero: ");
+    scanf("%d", &x);
+    printf("O complemento bit a bit de %d eh: %d", x, y = ~x);
+}
+*/
+
+/*18 - Elabore um programa que leia dois números inteiros e exiba o deslocamento, à
+esquerda e à direita, do primeiro número pelo segundo.*/
+
+/*int main () {
+    int a, b;
+    printf("Escreva dois numeros: ");
+    scanf("%d %d", &a, &b);
+    printf("%d\n", a << b);
+    printf("%d", b >> a);
+}
+*/
+
+/*19 - Elabore um programa que leia dois números inteiros e exiba o resultado das operações
+de “ou exclusivo”, “ou bit a bit” e “e bit a bit” entre eles.*/
+
+int main () {
+    int a, b;
+    printf("Escreva dois numeros: ");
+    scanf("%d %d", &a, &b);
+    printf("a & b = %d\n", a & b);
+    printf("a | b = %d\n", a | b);
+    printf("a ^ b = %d", a ^ b);
+}

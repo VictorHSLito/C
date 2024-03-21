@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
 /*1 - Faça um programa que leia um número inteiro e retorne seu antecessor e seu sucessor.*/
 
@@ -113,10 +114,82 @@ ii. O segundo receberá 32% do total.
 iii. O terceiro receberá o restante.
 Calcule e imprima a quantia recebida por cada um dos ganhadores.*/
 
-int main () {
+/*int main () {
     const int valor = 780000;
     float a, b, c;
     printf("O primeiro ganhador ganhou: %f\n", a = valor*(46.0/100));
     printf("O segundo ganhador ganhou: %f\n", b = valor*(32.0/100));
     printf("E por fim, o ultimo ganhador ganhou: %f", c = valor*(22.0/100));
 }
+*/
+
+/*11 - Leia o valor do raio de um círculo. Calcule e imprima a área do círculo correspondente.
+A área do círculo é A = π * raio2, sendo π = 3.141592.*/
+
+/*int main () {
+    const float pi = 3.141592;
+    float raio, area;
+    printf("Digite um valor de raio de circunfencia: ");
+    scanf("%f", &raio);
+    printf("A area do circulo e de: %f", area = pi * (raio*raio));
+}
+*/
+
+/*12 - Leia a altura e o raio de um cilindro circular e imprima o volume desse cilindro.
+O volume de um cilindro circular é calculado por meio da seguinte fórmula:
+V = π * raio2 * altura*/
+
+/*int main () {
+    const float pi = 3.141592;
+    float volume, raio, altura;
+    printf("Digite um valor para o raio do cilindro e para altura: ");
+    scanf("%f %f", &raio, &altura);
+    printf("O volume desse cilindro e de: %f m3", volume = pi * raio * raio * altura);
+}
+*/
+
+/*13 - Sejam a e b os catetos de um triângulo cuja hipotenusa h é obtida pela equação:
+h = raiz de a² + b²
+Faça um programa que leia os valores de a e b, e calcule o valor da hipotenusa
+através da fórmula dada. Imprima o resultado.*/
+
+/*int main () {
+    float h, a, b;
+    printf("Digite dois valores para catetos do triangulo: ");
+    scanf("%f %f", &a, &b);
+    printf("O valor da hipotenusa desse triangulo vale: %f", h = sqrt((a*a + b*b)));
+}
+*/
+
+/*14 - Faça um programa que converta uma letra maiúscula em letra minúscula. Use a
+tabela ASCII para isso.*/
+
+/*int main () {
+    char a;
+    int x;
+    printf("Digite um caractere: ");
+    scanf("%c", &a);
+    x = a;  // pega o numero ASCII da letra lida
+    x = a + 32;  // pega o seu correspondênte minúsculo
+    printf("%c", x);
+}
+*/
+
+/*15 - Faça um programa para ler um número inteiro positivo de três dígitos. Em seguida,
+calcule e mostre o número formado pelos dígitos invertidos do número lido.
+Exemplo:
+Número lido = 123
+Número gerado = 321*/
+
+int main () {
+    int a, b, c;
+    printf("Digite um numero: ");
+    scanf("%d", &a);
+    b = a % 10;
+    c = a / 10;
+    b = b * 10 + c%10;
+    c = c / 10;
+    b = b * 10 + c%10;
+    printf("%d", b);
+}
+

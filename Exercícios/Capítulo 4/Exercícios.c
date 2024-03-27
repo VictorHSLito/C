@@ -95,12 +95,20 @@ seu peso ideal, utilizando as seguintes fórmulas (em que “h” corresponde à
 •• Homens: (72,7 * h) – 58
 •• Mulheres: (62,1 * h) – 44,7*/
 
-int main () {
+/*int main () {
     float altura, peso_ideal;
     char sexo;
-    printf("Digite a sua altura: ");
+    printf("Digite a sua altura (em metros): ");
     scanf("%f", &altura);
     printf("Agora digite o seu sexo [M/F]: ");
-    scanf("%c", &sexo);
+    scanf(" %c", &sexo);
     
+    if (sexo == 'm' || sexo == 'M') {
+        printf("O seu peso ideal eh de: %f", peso_ideal = (72.7 * altura) - 58);
+    }
+    else {
+        printf("O seu peso ideal eh de: %f", peso_ideal = (62.1 * altura) - 44,7);
+    }
 }
+*/
+

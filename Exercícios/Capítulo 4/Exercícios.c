@@ -111,4 +111,279 @@ seu peso ideal, utilizando as seguintes fórmulas (em que “h” corresponde à
     }
 }
 */
+/*7 - Uma empresa vende o mesmo produto para quatro diferentes estados. Cada estado
+possui uma taxa diferente de imposto sobre o produto. Faça um programa
+em que o usuário entre com o valor e o estado de destino do produto e o programa
+retorne o preço final do produto acrescido do imposto do estado em que
+ele será vendido. Se o estado digitado não for válido, mostrará uma mensagem
+de erro.
+MG - 7%
+SP - 12%
+RJ - 15%
+MS - 8%*/
 
+/*int main () {
+    float valor;
+    char estado;
+    printf("Digite um valor e um estado: ");
+    scanf("%f %c", &valor, &estado);
+    switch (estado)
+    {
+        case 'MG': {
+            printf("Preço final = %f", valor = valor*1.07);
+            break;
+        }            
+        case 'SP': {
+            printf("Preço final = %f", valor = valor*1.12);
+            break;
+        }            
+        case 'RJ': {
+            printf("Preço final = %f", valor = valor*1.15);
+            break;
+        }            
+        case 'MS': {
+            printf("Preço final = %f", valor = valor*1.08);
+            break;
+        }           
+        default: {
+            printf("Nao foi digitado um estado valido!");
+            break;
+        }
+            
+    }
+}
+*/
+
+/*8 - Escreva um programa que, dada a idade de um nadador, o classifique em uma das
+seguintes categorias:
+Infantil A 5-7
+Infantil B 8-10
+Juvenil A 11-13
+Juvenil B 14-17
+Sênior maiores de 18 anos*/
+
+/*int main () {
+    int idade;
+    printf("Digite sua idade: ");
+    scanf("%d", &idade);
+    if (idade >= 5 && idade <= 7) {
+        printf("Infantil A");
+    }
+    else {
+        if (idade >= 8 && idade <= 10) {
+            printf("Infantil B");
+        }
+        else {
+            if (idade >= 11 && idade <= 13) {
+                printf("Juvenil A");
+            }
+            else {
+                if (idade >= 14 && idade <= 17) {
+                    printf("Juvenil B");
+                }
+                else {
+                    printf("Senior");
+                }
+            }
+        }
+    }
+}
+*/
+
+/*9 - Faça um programa que leia a altura e o peso de uma pessoa. De acordo com a
+tabela a seguir, verifique e mostre qual a classificação dessa pessoa.
+Menor do que 1,20 A D G
+1,20-1,70 B E H
+Maior do que 1,70 C F I*/
+
+/*int main () {
+    int idade;
+    float altura;
+    printf("Digite sua idade: ");
+    scanf("%d", &idade);
+    printf("Agora digite sua altura (em metros): ");
+    scanf("%f", &altura);
+    if (idade <= 60 && altura <= 1.20) {
+        printf("Classificacao A");
+    if (idade > 60 && idade <= 90 && altura <= 1.20)
+        printf("Classificacao D");
+    }
+    if (idade > 90 && altura <= 1.20) {
+        printf ("Classificacao G");
+    }
+    if (altura > 1.20 && altura <= 1.70 && idade <= 60) {
+        printf("Classificacao B");
+    }
+    if (altura > 1.20 && altura <= 1.70 && idade > 60 && idade <= 90) {
+        printf("Classificacao E");
+    }
+    if (altura > 1.20 && altura <= 1.70 && idade > 90) {
+        printf("Classificacao H");
+    }
+    if (altura > 1.70 && idade <= 60) {
+        printf("Classificacao C");
+    }
+    if (altura > 1.70 && idade > 60 && idade <= 90) {
+        printf("Classificacao F");
+    }
+    if (altura > 1.70 && idade > 90) {
+        printf("Classificacao I");
+    }
+}
+*/
+
+/*10 - Faça um programa que leia três números inteiros positivos e efetue o cálculo de
+uma das seguintes médias de acordo com um valor numérico digitado pelo usuário
+e mostrado na tabela a seguir:
+1 Geométrica;
+2 Ponderada;
+3 Harmônica;
+4 Aritmética;*/
+
+/*int main () {
+    int a, b, c, numero;
+    printf("Digite tres numeros: ");
+    scanf("%d %d %d", &a, &b, &c);
+    printf("Agora digite un numero de 1 a 4: ");
+    scanf("%d", &numero);
+
+    switch (numero) {
+        case 1: {
+            printf("A media geometrica dos numeros é: %d", a*b*c);
+            break;
+        }
+        case 2: {
+            printf("A media ponderada dos numeros vale: %f", (float)(a + 2*b + 3*c)/6);
+            break;
+        }
+        case 3: {
+            printf("A media harmonica dos numeros vale: %f", 1.0/(1.0/a + 1.0/b + 1.0/c));
+            break;
+        }
+        case 4: {
+            printf("A media aritmetica dos numeros vale: %f", (float)(a+b+c)/3);
+            break;
+        }
+        default:{
+            printf("Nao foi selecionada uma opcao valida!");
+            break;
+        }
+
+    }
+}
+*/
+
+/*12 - Faça um programa que informe o mês de acordo com o número digitado pelo
+usuário. Exemplo: Entrada = 4. Saída = Abril.*/
+
+/*int main () {
+    int numero;
+    printf("Digite um numero de 1 a 12: ");
+    scanf("%d", &numero);
+
+    switch (numero)
+    {
+    case 1:
+        printf("O mes correspondente ao numero %d eh Janeiro", numero);
+        break;
+    case 2:
+        printf("O mes correspondente ao numero %d eh Fevereiro", numero);
+        break;
+    case 3:
+        printf("O mes correspondente ao numero %d eh Março", numero);
+        break;
+    case 4:
+        printf("O mes correspondente ao numero %d eh Abril", numero);
+        break;
+    case 5:
+        printf("O mes correspondente ao numero %d eh Maio", numero);
+        break;
+    case 6:
+        printf("O mes correspondente ao numero %d eh Junho", numero);
+        break;
+    case 7:
+        printf("O mes correspondente ao numero %d eh Julho", numero);
+        break;
+    case 8:
+        printf("O mes correspondente ao numero %d eh Agosto", numero);
+        break;
+    case 9:
+        printf("O mes correspondente ao numero %d eh Setembro", numero);
+        break;
+    case 10:
+        printf("O mes correspondente ao numero %d eh Outubro", numero);
+        break;
+    case 11:
+        printf("O mes correspondente ao numero %d eh Novembro", numero);
+        break;
+    case 12:
+        printf("O mes correspondente ao numero %d eh Dezembro", numero);
+        break;
+    default:
+        printf("Nao foi digitado um numero valido!");
+        break;
+    }
+}
+*/
+
+/*12 - Usando o comando switch, escreva um programa que leia um inteiro entre 1 e 7
+e imprima o dia da semana correspondente a esse número. Isto é, domingo, se 1,
+segunda-feira, se 2, e assim por diante.
+*/
+
+/*int main () {
+    int numero;
+    printf("Digite um numero de 1 a 7: ");
+    scanf("%d", &numero);
+
+    switch (numero)
+    {
+    case 1:
+        printf("O dia correspondente ao numero %d eh Domingo", numero);
+        break;
+    case 2:
+        printf("O mes correspondente ao numero %d eh Segunda", numero);
+        break;
+    case 3:
+        printf("O mes correspondente ao numero %d eh Terça", numero);
+        break;
+    case 4:
+        printf("O mes correspondente ao numero %d eh Quarta", numero);
+        break;
+    case 5:
+        printf("O mes correspondente ao numero %d eh Quinta", numero);
+        break;
+    case 6:
+        printf("O mes correspondente ao numero %d eh Sexta", numero);
+        break;
+    case 7:
+        printf("O mes correspondente ao numero %d eh Sabado", numero);
+        break;
+    }
+}
+*/
+
+/*13 - Faça um programa que mostre ao usuário um menu com quatro opções de operações
+matemáticas (as operações básicas, por exemplo). O usuário escolhe uma
+das opções, e o seu programa pede dois valores numéricos e realiza a operação,
+mostrando o resultado.*/
+
+int main () {
+    int n1, n2, primo, i, j;
+    printf("Digite um numero: ");
+    scanf("%d", &n1);
+    printf("Digite um outro numero: ");
+    scanf("%d", &n2);
+    primo = 1;
+    for (i = n1; i <= n2; i++) {
+        for (j = 2; j <= i; j++) {
+            if (i % j == 0) {
+                primo = 0;
+                break;
+            }
+        }
+    if (primo && i > 1) {
+        printf("%d", i);
+    }
+    }
+}

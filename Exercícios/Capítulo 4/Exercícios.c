@@ -368,22 +368,105 @@ matemáticas (as operações básicas, por exemplo). O usuário escolhe uma
 das opções, e o seu programa pede dois valores numéricos e realiza a operação,
 mostrando o resultado.*/
 
-int main () {
-    int n1, n2, primo, i, j;
-    printf("Digite um numero: ");
-    scanf("%d", &n1);
-    printf("Digite um outro numero: ");
-    scanf("%d", &n2);
-    primo = 1;
-    for (i = n1; i <= n2; i++) {
-        for (j = 2; j <= i; j++) {
-            if (i % j == 0) {
-                primo = 0;
-                break;
-            }
-        }
-    if (primo && i > 1) {
-        printf("%d", i);
+/*int main () {
+    int opcao, n1, n2, resultado;
+    printf("Escolha uma das opcoes: ");
+    printf("1 - Soma, 2 - Multiplicacao, 3 - Divisao, 4 - Subtracao\n");
+    scanf("%d", &opcao);
+    printf("Agora digite dois numeros: ");
+    scanf("%d %d", &n1, &n2);
+
+    switch (opcao)
+    {
+    case 1: {
+        resultado = n1 + n2;
+        printf("A soma desses dois numeros vale: %d", resultado);
+        break;
     }
+    case 2: {
+        resultado = n1 * n2;
+        printf("A multiplicacao desses numeros vale: %d", resultado);
+        break;
+    }
+    case 3: {
+        if (n2 > 0) {
+            resultado = n1/n2;
+            printf("A divisao do primeiro numero pelo segundo vale: %d", resultado);
+            break;
+        }
+        else {
+            printf("Nao eh possivel divisao por zero");
+            break;
+        }
+    }
+    case 4: {
+        resultado = n1 - n2;
+        printf("A subtracao entre os numeros vale: %d", resultado);
+        break;
+    }
+    default: {
+        printf("Nenhuma opcao corresponde a sua escolha!");
+    }
+        break;
     }
 }
+*/
+
+/*14 - Faça um programa para verificar se determinado número inteiro lido é divisível
+por 3 ou 5, mas não simultaneamente pelos dois.*/
+
+/*int main () {
+    int n1;
+    printf("Digite um numero: ");
+    scanf("%d", &n1);
+
+    if (n1 % 5 == 0 && n1 % 3 == 0) {
+        printf("Esse numero eh divisivel por 5 e 3");
+    }
+    else {
+        if (n1 % 5 == 0) {
+        printf("Esse numero eh divisivel apenas por 5");
+    }
+        if (n1 % 3 == 0) {
+        printf("Esse numero eh divisivel apenas por 3");
+    }
+    }  
+}
+*/
+
+/*15 - Faça um programa que leia os coeficientes de uma equação do segundo grau. Em
+seguida, calcule e mostre as raízes dessa equação, lembrando que as raízes são
+calculadas como
+em que Δ = b2 – 4 * a * c e ax2 + bx + c = 0 representa uma equação do segundo
+grau. A variável a tem de ser diferente de zero. Caso seja igual, imprima a mensagem
+“Não é equação de segundo grau”. Do contrário, imprima:
+•• Se Δ < 0, não existe real. Imprima a mensagem “Não existe raiz”.
+•• Se Δ = 0 existe uma raiz real. Imprima a raiz e a mensagem “Raiz única”.
+•• Se Δ > 0, existem duas raízes reais. Imprima as raízes.*/
+
+/*int main () {
+    int a, b, c, delta;
+    float raiz1, raiz2;
+    printf("Digite os coeficientes de uma equacao do segundo grau: ");
+    scanf("%d %d %d", &a, &b, &c);
+    delta = pow(b, 2) - 4 * a * c;
+    raiz1 = (b - sqrt(delta))/2*a;
+    raiz2 = (b + sqrt(delta))/2*a;
+    if (a == 0) {
+        printf("O coeficiente a nao pode ser 0");
+        return 0;
+    }
+    else {
+        if (delta < 0) {
+            printf("Nao existe raiz real para essa equacao");
+        }
+        if (delta == 0) {
+            printf("Existe apenas uma raiz para essa equacao, a qual eh: %f", raiz1);
+        }
+        if (delta > 0) {
+            printf("Existem mais de uma raiz para essa equacao, as quais sao: %f, %f", raiz1, raiz2);
+        }
+    }
+}
+*/
+

@@ -154,3 +154,82 @@ sua média.*/
 }
 */
 
+/*11 - Faça um algoritmo que leia um número positivo e imprima seus divisores. Exemplo:
+os divisores do número 66 são: 1, 2, 3, 6, 11, 22, 33 e 66.*/
+
+/*int main () {
+    int a, i;
+    printf("Digite um numero positivo: ");
+    scanf("%d", &a);
+        
+    if (a > 0) {
+        printf("Os divisores do numero %d, sao: ", a);
+        for (i = 1; i <= a; i++) {
+            if (a % i == 0) {
+                printf("%d ", i);
+            }
+        }
+    }
+    else {
+        printf("O numero digitado %d, nao eh maior quer 0!", a);
+    }
+}
+*/
+
+/*12 - Escreva um programa que leia um número inteiro e calcule a soma de todos os
+divisores desse número, com exceção dele próprio. Exemplo: a soma dos divisores
+do número 66 é 1 + 2 + 3 + 6 + 11 + 22 + 33 = 78.*/
+
+/*int main () {
+    int i, a, soma;
+    printf("Digite um numero: ");
+    scanf("%d", &a);
+
+    for (i = 1; i <= a - 1; i++) {
+        if (a % i == 0) {
+            printf("%d ", i);
+            soma = soma + i;
+        }
+    }
+    printf("\nA soma final dos divisores do numero %d, eh: %d ", a, soma);
+}
+*/
+
+/*13 - Faça um programa que exiba a soma de todos os números naturais abaixo de
+1.000 que são múltiplos de 3 ou 5.*/
+
+/*int main () {
+    int i, soma;
+    for (i = 1; i <= 1000; i++) {
+        if (i % 5 == 0 || i % 3 == 0) {
+            soma = soma + i;
+        }
+    }
+    printf("A soma final entre os numeros multiplos de 3 ou 5 ate 1000 sao: %d", soma);
+}
+*/
+
+/*14 - Escreva um programa que leia um número inteiro, maior ou igual a zero, do usuário.
+Imprima o enésimo termo da sequência de Fibonacci. Essa sequência começa
+no termo de ordem zero, e, a partir do segundo termo, seu valor é dado pela soma
+dos dois termos anteriores. Alguns termos dessa sequência são: 0, 1, 1, 2, 3, 5, 8,
+13, 21, 34.*/
+
+/*int main () {
+    int a = 0, b = 1, c, i, termos;
+    printf("Digite um numero: ");
+    scanf("%d", &termos);
+    if (termos == 0) {
+        printf("%d", a);
+    }
+    else {
+        for (i = 1; i <= termos; i++) {
+        c = a + b;
+        printf("%d ", c);
+        a = b;
+        b = c;        
+    }
+    }   
+}
+*/
+

@@ -233,3 +233,82 @@ dos dois termos anteriores. Alguns termos dessa sequência são: 0, 1, 1, 2, 3, 
 }
 */
 
+/*16 - Em matemática, o número harmônico designado por Hn define-se como o enésimo
+termo da série harmônica.
+Apresente um programa que calcule o valor de qualquer Hn.*/
+
+/*int main () {
+    int i, num;
+    float hn = 0;
+    printf("Digite um numero: ");
+    scanf("%d", &num);
+    for (i = 1; i <= num; i++) {
+        hn = hn + 1.0/i;
+    }
+    printf("O numero harmonico do numero %d, eh: %f", num, hn);
+}
+*/
+
+/*17 - Escreva um programa que leia um número inteiro positivo N e em seguida imprima
+N linhas do chamado triângulo de Floyd:
+1
+2 3
+4 5 6
+7 8 9 10
+11 12 13 14 15
+16 17 18 19 20 21*/
+
+/*int main() {
+    int n, i, j, aux;
+    printf("Digite um numero: ");
+    scanf("%d", &n);
+
+    for(i = 0, aux = 1; i < n; i++){
+        for(j = 0; j <= i; j++, aux++){
+            printf("%d ", aux);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+*/  // REVISAR ESTE EXERCÍCIO!!!!!
+
+/*18 - Faça um programa que receba um número inteiro maior do que 1 e verifique se o
+número fornecido é primo ou não.*/
+
+/*int main () {
+    int num, i, divisores;
+    printf("Digite um numero: ");
+    scanf("%d", &num);
+
+    divisores = 0;
+    i = 1;
+    while (i <= num -1) {
+        if (num % i == 0) {
+            divisores = divisores + 1;
+        }
+        i++;
+    }
+    if (divisores == 1) {
+        printf("O numero %d eh primo!", num);
+    }
+    else {
+        printf("O numero %d nao eh primo", num);
+    }
+}
+*/
+
+/*Faça um programa que calcule e escreva o valor de S:
+S = 1/1 + 3/2 + 5/3 + ... + 99/55*/
+
+/*int main () {
+    float soma = 0, i, j;
+    printf("A soma de S vale: ");
+
+    for (i = 1, j = 1; i <= 99 && j <= 55; i = i + 2, j++) {
+        soma = soma + (i/j);
+    }
+    printf("O valor final da soma vale: %f", soma);
+}
+*/  
+

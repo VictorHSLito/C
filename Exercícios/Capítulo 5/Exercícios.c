@@ -233,6 +233,29 @@ dos dois termos anteriores. Alguns termos dessa sequência são: 0, 1, 1, 2, 3, 
 }
 */
 
+/*15 - Elabore um programa que faça a leitura de vários números inteiros até que se digite
+um número negativo. O programa tem de retornar o maior e o menor número
+lido.*/
+
+/*int main () {
+    int num, maior = 0, menor;
+    printf("Digite um numero: ");
+    while (num > -1) {
+        scanf("%d", &num);
+        if (num > maior) {
+            maior = num;
+        }
+        else if (num < menor && num > -1) {
+            menor = num;
+        }
+    }
+    if (num < 0) {
+        menor = num;
+    }
+    printf("O maior e o menor numero digitado respectivamente foram: %d e %d", maior, menor);    
+}
+*/
+
 /*16 - Em matemática, o número harmônico designado por Hn define-se como o enésimo
 termo da série harmônica.
 Apresente um programa que calcule o valor de qualquer Hn.*/

@@ -321,7 +321,7 @@ número fornecido é primo ou não.*/
 }
 */
 
-/*Faça um programa que calcule e escreva o valor de S:
+/*19 - Faça um programa que calcule e escreva o valor de S:
 S = 1/1 + 3/2 + 5/3 + ... + 99/55*/
 
 /*int main () {
@@ -335,3 +335,48 @@ S = 1/1 + 3/2 + 5/3 + ... + 99/55*/
 }
 */  
 
+/*20 - Faça um programa que leia um valor inteiro e positivo N, calcule o mostre o valor
+E, conforme a fórmula a seguir:
+E = 1/1! + 1/2! + 1/3! + ... + 1/N!*/
+
+/*int main () {
+    int num, i, fatorial = 1;
+    float soma;
+    printf("Digite um numero: ");
+    scanf("%d", &num);
+    soma = 0;
+    
+    for (i = 1; i <= num; i++) {
+        fatorial = fatorial*i;
+        soma = soma + 1.0/fatorial;
+        printf("%d ", fatorial);
+    }
+    printf("\n");
+    printf("A soma vale E vale: %f", soma);
+}
+*/
+
+/*21 - Escreva um programa que leia certa quantidade de números, imprima o maior
+deles e quantas vezes o maior número foi lido. A quantidade de números a serem
+lidos deve ser fornecida pelo usuário.*/
+
+/*int main () {
+    int num, i, a, maior = 0, contador = 0;
+    printf("Digite a quantidade de vezes que o programa irar repetir: ");
+    scanf("%d", &num);
+
+    for (i = num; i >= 1; i--) {
+        printf("Digite um numero: ");
+        scanf("%d", &a);
+        if (maior == a) {
+            contador ++;
+        }
+        if (maior < a) {
+            maior = a;
+            contador = 0;
+            contador++;
+        }
+    }
+    printf("O maior numero lido foi %d e ele foi lido %d vezes", maior, contador);
+}
+*/

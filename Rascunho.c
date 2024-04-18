@@ -162,3 +162,38 @@ valores de bits diferentes naquela posição:
 um valor para a esquerda ou para a direita, colocando novos valores de bits (que podem
 ser 0s ou 1s) nos lugares vagos.*/
 
+// Array
+
+/*int main () {
+    int notas[5], i;
+    printf("Digite a nota de 5 alunos\n");
+    for (i = 1; i <= 5; i++) {
+        printf("Nota do aluno %d: ", i);
+        scanf("%d", &notas[i]);
+    }
+}
+*/
+
+/*int main () {
+    int vet[5] = {1, 3, 2, 4, 1}, i; // É possível inicializar um array da seguinte forma.
+
+    for (i = 0; i < 5; i++) {
+        printf("%d ", vet[i]);
+    }
+}
+*/
+
+// Matriz
+
+/*int main () {
+    int matriz[3][3], i, j, c;
+    printf("Digite alguns numeros: ");
+
+    for (i = 1; i <= 3; i++) {
+        for (j = 1; j <= 3; j++) {
+            printf("Digite o valor da posicao da matriz [%d] [%d]", i, j);
+            scanf("%d", &matriz[i][j]);
+        }
+    }
+}
+*/

@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
 /*1 - Crie um programa que leia do teclado seis valores inteiros e em seguida mostra na
 tela os valores lidos.*/
@@ -282,4 +283,28 @@ os números que já foram fornecidos. Exiba na tela o vetor final que foi digita
     }
 }
 */
+
+/*14 - Faça um programa que calcule o desvio-padrão d de um vetor V contendo n números em que m é a média desse vetor. 
+Considere n = 10. O vetor v deve ser lido do teclado.
+d = raiz 1/n-1 Somatório de i = 0 até n-1 (V[i] - m)*/
+
+int main () {
+    int vetor[10], i, soma = 0;
+    float media = 0, d = 0, somatorio = 0;
+
+    printf("Digite 10 numeros para o vetor: ");
+    for (i = 0; i < 10; i++) {
+        scanf("%d", &vetor[i]);
+        soma = soma + vetor[i];
+    }
+    media = soma/10.0;
+
+    for (i = 0; i < 10; i++) {
+        somatorio = pow(vetor[i] - media, 2);  // O livro errou ao não mostrar que é elevado ao quadrado
+    }
+
+    d = sqrt(1.0/9.0 * somatorio);
+
+    printf("O desvio padrao desse vetor eh: %f", d);
+}
 

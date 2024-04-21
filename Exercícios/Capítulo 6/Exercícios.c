@@ -213,7 +213,7 @@ o quadrado de cada elemento desse vetor armazenando esse resultado em outro
 vetor. Os conjuntos têm, no máximo, 20 elementos. Imprima os dois conjuntos
 de números.*/
 
-int main () {
+/*int main () {
     float vetorA[20], vetorB[20];
     int i;
 
@@ -231,5 +231,55 @@ int main () {
         printf("%f ", vetorB[i]);
     }
 }
+*/
 
+/*12 - Faça um programa que leia um vetor de 10 posições. Verifique se existem valores
+iguais e os escreva na tela.*/
+
+/*int main () {
+    int vetor[10], i, j;
+    printf("Digite 10 numeros: ");
+
+    for (i = 0; i < 10; i++) {
+        scanf("%d", &vetor[i]);
+    }
+
+    printf("Numeros que apareceram mais de uma vez: ");
+
+    for(i = 0; i < 10; i++) {
+        for (j = i + 1; j < 10; j++) {
+                if (vetor[i] == vetor[j]) {
+                    printf("%d ", vetor[i]);
+                }
+            }
+    }
+}
+*/
+
+/*13 - Faça um programa para ler 10 números diferentes a serem armazenados em um
+vetor. Os números deverão ser armazenados no vetor na ordem em que forem lidos,
+sendo que, caso o usuário digite um número que já foi digitado anteriormente,
+o programa deverá pedir a ele para digitar outro número. Note que cada valor
+digitado pelo usuário deve ser pesquisado no vetor, verificando se ele existe entre
+os números que já foram fornecidos. Exiba na tela o vetor final que foi digitado.*/
+
+/*int main () {
+    int vetor[10], i, j;
+    printf("Digite 10 valores: ");
+
+    for (i = 0; i < 10; i++) {
+        scanf("%d", &vetor[i]);
+        for (j = 0; j < i; j++) {
+            if (vetor[i] == vetor[j]) {
+                printf("Numero ja digitado, digite outro numero: ");
+                i--;
+            }
+        }
+    }
+    printf("Os valores digitados no vetor foram:\n");
+    for (i = 0; i < 10; i++) {
+        printf("%d ", vetor[i]);
+    }
+}
+*/
 

@@ -288,7 +288,7 @@ os números que já foram fornecidos. Exiba na tela o vetor final que foi digita
 Considere n = 10. O vetor v deve ser lido do teclado.
 d = raiz 1/n-1 Somatório de i = 0 até n-1 (V[i] - m)*/
 
-int main () {
+/*int main () {
     int vetor[10], i, soma = 0;
     float media = 0, d = 0, somatorio = 0;
 
@@ -307,4 +307,32 @@ int main () {
 
     printf("O desvio padrao desse vetor eh: %f", d);
 }
+*/
 
+/*15 - Leia um vetor com 10 números de ponto flutuante. Em seguida, ordene os elementos
+desse vetor e imprima o vetor na tela.*/
+
+int main () {
+    int i, j; 
+    float vetor[10], aux;
+
+    printf("Digite 10 numeros: ");
+    for (i = 0; i < 10; i++) {
+        scanf("%f", &vetor[i]);
+    }
+    
+    for (j = 9; j >= 1; j--) {
+        for (i = 0; i < j; i++) {
+            if (vetor[i] > vetor[i+1]) {
+                aux = vetor[i];
+                vetor[i] = vetor[i+1];
+                vetor[i+1] = aux;
+            }
+        }
+    }
+    
+    for (i = 0; i < 10; i++) {
+        printf("%f ", vetor[i]);
+    }
+    
+}

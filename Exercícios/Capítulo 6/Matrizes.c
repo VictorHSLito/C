@@ -408,7 +408,69 @@ nota foi na prova 3.*/
 /*11 - Faça um programa que leia uma matriz de tamanho 5 × 5. Calcule e imprima a
 soma dos elementos dessa matriz que estão acima da diagonal principal.*/
 
-int main () {
-    
-}
+/*int main () {
+    int matriz[5][5], i, j, soma=0; 
 
+    printf("Digite alguns numeros para uma matriz 5x5: ");
+
+    for (i = 0; i < 5; i++) {
+        for (j = 0; j < 5; j++) {
+            scanf("%d", &matriz[i][j]);
+        }
+    }
+    printf("Matriz digitada:\n");
+
+    for (i = 0; i < 5; i++) {
+        for (j = 0; j < 5; j++) {
+           printf("[%d] ", matriz[i][j]);
+        }
+    printf("\n");
+    }
+    
+    for (i = 0; i < 5; i++) {
+        for ( j = 0; j < 5; j++) {
+            if (j > i) {
+                soma = soma + matriz[i][j];
+            }
+        }
+        
+    }
+
+    printf("A soma dos elementos acima da diagonal principal eh: %d", soma);
+}
+*/
+
+/*12 - Faça um programa que leia uma matriz de tamanho 6 × 6. Calcule e imprima a
+soma dos elementos dessa matriz que estão abaixo da diagonal principal.*/
+
+/*int main () {
+    int matriz[6][6], i, j, soma=0;
+
+    printf("Digite os numeros para uma matriz 6x6: ");
+
+    for (i = 0; i < 6; i++) {
+        for (j = 0; j < 6; j++) {
+            scanf("%d", &matriz[i][j]);
+        }   
+    }
+
+    printf("Matriz digitada:\n");
+
+    for (i = 0; i < 6; i++) {
+        for (j = 0; j < 6; j++) {
+            printf("[%d] ", matriz[i][j]);
+        }
+    printf("\n");
+    } 
+
+    for (i = 0; i < 6; i++) {
+        for (j = 0; j < 6; j++) {
+            if (i > j) {
+                soma = soma + matriz[i][j];
+            }
+        }   
+    }
+
+    printf("A soma dos elemtos abaixo da diagonal principal eh %d", soma);
+}
+*/

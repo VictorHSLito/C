@@ -218,7 +218,7 @@ contidos em sua diagonal principal.*/
 /*7 - Leia uma matriz de tamanho 3 × 3. Em seguida, imprima a soma dos valores
 contidos em sua diagonal secundária.*/
 
-int main () {
+/*int main () {
     int matriz[3][3], i, j, soma = 0;
 
     printf("Digite alguns valores para uma matriz 3x3: ");
@@ -266,3 +266,149 @@ int main () {
     printf("\nE a soma desses valores eh igual a %d", soma);
 
 }
+*/
+
+/*8 - Calcular e imprimir na tela uma matriz de tamanho 10 × 10, em que seus elementos
+são da forma:
+A[i][j] = 2i + 7j – 2 se i < j
+A[i][j] = 3i² – 1 se i = j
+A[i][j] = 4i³ + 5j² + 1 se i > j*/
+
+/*int main () {
+    int matriz[10][10], i, j;
+
+    for (i = 0; i < 10; i++) {
+        for (j = 0; j < 10; j++) {
+            if (i < j) {
+                matriz[i][j] = 2*i + 7*j - 2;
+            }
+            if (i == j) {
+                matriz[i][j] = 3*i*i - 1;
+            }
+            if (i > j) {
+                matriz[i][j] = 4*i*i*i + 5*j*j + 1;
+            }
+        }
+    }
+
+    for (i = 0; i < 10; i++) {
+        for (j = 0; j < 10; j++) {
+            printf("[%d] ", matriz[i][j]);
+        }
+    printf("\n");
+    }
+}
+*/
+
+/*9 - Faça um programa que permita ao usuário entrar com uma matriz de tamanho 3
+× 3 de números inteiros. Em seguida, calcule um vetor contendo três posições, em
+que cada posição deverá armazenar a soma dos números de cada coluna da matriz.
+Exiba na tela esse array.*/
+
+/*int main () {
+    int matriz[3][3], vetor[3], i, j, soma0=0, soma1=0, soma2=0;
+
+    printf("Digite alguns valores para uma matriz 3x3:");
+
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+            scanf("%d", &matriz[i][j]);
+        }
+    }
+
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+            if (j == 0) {
+                soma0 = soma0 + matriz[i][0];
+            }
+            if (j == 1) {
+                soma1 = soma1 + matriz[i][1];
+            }
+            if (j == 2) {
+                soma2 = soma2 + matriz[i][2];
+            }
+        }
+    }
+    vetor[0] = soma0;
+    vetor[1] = soma1;
+    vetor[2] = soma2;
+
+    printf("Matriz gerada:\n");
+
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+            printf("[%d]", matriz[i][j]);
+        }
+    printf("\n");
+    }
+
+
+    printf("O vetor gerado pelos numeros fornecidos eh:\n");
+    for (i = 0; i < 3; i++) {
+        printf("[%d]", vetor[i]);
+    }
+
+}
+*/
+
+/*10 - Leia uma matriz de tamanho 10 × 3 com as notas de 10 alunos em três provas. Em
+seguida, calcule e escreva na tela o número de alunos cuja pior nota foi na prova 1,
+o número de alunos cuja pior nota foi na prova 2 e o número de alunos cuja pior
+nota foi na prova 3.*/
+
+/*int main () {
+    int matriz[10][3], piores[3][2], i, j, pior0, pior1, pior2;
+
+    printf("Digite as 3 notas dos 10 alunos:\n");
+    for (i = 0; i < 10; i++) {
+        printf("Aluno %d:", i+1);
+        for (j = 0; j < 3; j++) {
+            scanf("%d", &matriz[i][j]);
+        }
+    }
+
+    pior0 = matriz[0][0];
+
+    for (i = 0; i < 10; i++) {
+        if (matriz[i][0] < pior0) {
+            pior0 = matriz[i][0];
+            piores[0][0] = i;
+            piores[0][1] = pior0;
+        }
+    }
+
+    pior1 = matriz[0][1];
+
+    for (i = 0; i < 10; i++) {
+        if (matriz[i][1] < pior1) {
+            pior1 = matriz[i][1];
+            piores[1][0] = i;
+            piores[1][1] = pior1;
+        }
+    }
+
+    pior2 = matriz[0][2];
+
+    for (i = 0; i < 10; i++) {
+        if (matriz[i][2] < pior2) {
+        pior2 = matriz[i][2];
+        piores[2][0] = i;
+        piores[2][1] = pior2;
+        }
+    }
+
+    printf("Os piores alunos de cada prova são:\n");
+    for (i = 0; i < 3; i++) {
+        printf("Prova %d, Aluno: [%d] Nota: %d\n", i + 1, piores[i][0] + 1, piores[i][1]);
+    }
+
+}
+*/
+
+/*11 - Faça um programa que leia uma matriz de tamanho 5 × 5. Calcule e imprima a
+soma dos elementos dessa matriz que estão acima da diagonal principal.*/
+
+int main () {
+    
+}
+

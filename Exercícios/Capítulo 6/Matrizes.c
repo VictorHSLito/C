@@ -474,3 +474,86 @@ soma dos elementos dessa matriz que estão abaixo da diagonal principal.*/
     printf("A soma dos elemtos abaixo da diagonal principal eh %d", soma);
 }
 */
+/*13 - Faça um programa que leia uma matriz de tamanho 5 × 5. Calcule e imprima a
+soma dos elementos dessa matriz que não pertencem à diagonal principal nem à
+diagonal secundária.*/
+
+/*int main () {
+    int matriz[5][5], i, j, soma;
+
+    printf("Digite os elementos da matriz 5x5: ");
+
+    for (i = 0; i < 5; i++) {
+        for (j = 0; j < 5; j++) {
+            scanf("%d", &matriz[i][j]);
+        }
+    }
+
+    printf("Matriz digitada:\n");
+
+    for (i = 0; i < 5; i++) {
+        for (j = 0; j < 5; j++) {
+            printf("[%d] ", matriz[i][j]);
+        }
+    printf("\n");
+    }
+
+    printf("Elementos da diagonal principal e diagonal secundaria");
+
+    for (i = 0; i < 5; i++) {
+        for (j = 0; j < 5; j++) {
+            if (i == j || i+j == 4) {
+                printf("[%d]\n", matriz[i][j]);  // mostra todos elementos da diagonal principal e secundária
+            }
+            else {
+                soma = soma + matriz[i][j];
+            }
+        }
+    }
+    
+    printf("A soma de todos os elementos que nao fazem parte da diagonal principal e da secundaria eh de: %d", soma);
+}
+*/
+
+/*14 - Faça um programa que leia uma matriz de tamanho 5 × 5. Calcule a soma dos
+elementos dessa matriz que pertencem à diagonal principal ou secundária. Calcule
+também a soma dos elementos que não pertencem a nenhuma das duas diagonais.
+Imprima na tela a diferença entre os dois valores.*/
+
+/*int main () {
+    int matriz[5][5], i, j, soma1 = 0, soma2 = 0;
+
+    printf("Digite numeros para uma matriz 5x5: ");
+
+    for (i = 0; i < 5; i++) {
+        for (j = 0; j < 5; j++) {
+            scanf("%d", &matriz[i][j]);
+        }
+    }
+
+    printf("Matriz digitada:\n");
+
+    for (i = 0; i < 5; i++) {
+        for (j = 0; j < 5; j++) {
+            printf("[%d] ", matriz[i][j]);
+        }
+    printf("\n");
+    }
+
+    for (i = 0; i < 5; i++) {
+        for (j = 0; j < 5; j++) {
+            if (i == j || i + j == 4) {
+                soma1 = soma1 + matriz[i][j];
+            }
+            else {
+                soma2 = soma2 + matriz[i][j];
+            }
+        }
+    }
+
+    printf("A soma dos elementos da diagonal principal e secundaria: %d\n", soma1);
+    printf("A soma dos elementos que nao fazem parte de uma ou outra eh: %d\n", soma2);
+    printf("A diferença entre as somas eh de: %d", soma1 - soma2);
+}
+*/
+

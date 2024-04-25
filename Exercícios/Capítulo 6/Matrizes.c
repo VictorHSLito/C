@@ -557,3 +557,56 @@ Imprima na tela a diferença entre os dois valores.*/
 }
 */
 
+/*15 - Faça um programa que leia uma matriz A de tamanho 5 × 5. Em seguida, calcule
+e imprima a matriz B, sendo que B = A².*/
+
+int main () {
+    int matrizA[5][5], matrizB[5][5], i, j, aux = 0, soma = 0;
+    
+    printf("Digite numeros para uma matriz 5x5: ");
+
+    for (i = 0; i < 5; i++) {
+        for (j = 0; j < 5; j++) {
+            scanf("%d", &matrizA[i][j]);
+        }
+    }
+
+    printf("Matriz A 5x5:\n");
+
+    for (i = 0; i < 5; i++) {
+        for (j = 0; j < 5; j++) {
+            printf("[%d] ", matrizA[i][j]);
+        }
+    printf("\n");
+    }
+
+    for (i = 0; i < 5; i++) {
+        for (j = 0; j < 5; j++) {
+            for (aux = 0; aux < 5; aux++) {
+            soma += matrizA[i][aux] * matrizA[aux][j];
+            }
+        matrizB[i][j] = soma;
+        soma = 0;
+        aux = 0;
+        }
+    }
+
+    printf("Matriz B 5x5:\n");
+
+    for (i = 0; i < 5; i++) {
+        for (j = 0; j < 5; j++) {
+            printf("[%d] ", matrizB[i][j]);
+        }
+    printf("\n");
+    }
+
+                                    /*                      EXERCÍCIO SIMPLESMENTE SENSACIONAL (REVISAR DEPOIS!)                      */
+                                    // Tem que pensar que matrizB[i][j] = matrizA[i][0] * matrizA[0][j] + matrizA[i][1] * matrizA[1][j]
+                                    /*1º Como o exercício estava muito difícil para uma matriz 5x5, eu fiz para uma 2x2 primeiro,
+                                    depois tive que pensar que usando apenas 2 "fors", não teria como.
+                                    2º Fiz uma variável chamada auxiliar que ela incrementava em um quando passava pelo loop do
+                                    i e do j ao mesmo tempo.
+                                    3º Depois disso foi só alinhar mais um for dentro dos outros 2 e testar.
+                                    */
+
+}

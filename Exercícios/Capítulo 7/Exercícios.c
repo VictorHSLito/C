@@ -195,3 +195,28 @@ possui.*/
 }
 */
 
+/*7 - Faça um programa que leia uma string e imprima uma mensagem dizendo se ela
+é um palíndromo ou não. Um palíndromo é uma palavra que tem a propriedade
+de poder ser lida tanto da direita para a esquerda como da esquerda para a direita.
+Exemplos: ovo, arara, rever, asa, osso etc.*/
+
+int main () {
+    char str[20];
+    int i, j, tamanho;
+
+    printf("Digite uma palavra:");
+    
+    scanf("%s", str);
+
+    tamanho = strlen(str);
+
+    for (i = 0, j = tamanho - 1; i <= j; i++, j--){
+        if (str[j] != str[i]) {
+            printf("Nao eh palindromo");
+            return 0;
+        }
+    }
+    
+    printf("Eh Palindromo\n");
+
+}  

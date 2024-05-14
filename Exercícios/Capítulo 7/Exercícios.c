@@ -200,7 +200,7 @@ possui.*/
 de poder ser lida tanto da direita para a esquerda como da esquerda para a direita.
 Exemplos: ovo, arara, rever, asa, osso etc.*/
 
-int main () {
+/*int main () {
     char str[20];
     int i, j, tamanho;
 
@@ -216,7 +216,91 @@ int main () {
             return 0;
         }
     }
-    
+
     printf("Eh Palindromo\n");
 
 }  
+*/
+
+/*8 - Construa um programa que leia duas strings do teclado. Imprima uma mensagem
+informando se a segunda string lida está contida dentro da primeira.*/
+
+/*int main () {
+    char str1[30], str2[20];
+    int i, j, tamanho1, tamanho2, encontrado = 0;
+
+    printf("Digite uma frase: ");
+
+    gets(str1);
+    tamanho1 = strlen(str1);
+
+    printf("\nAgora digite uma outra frase: ");
+
+    gets(str2);
+    tamanho2 = strlen(str2);
+
+    for (i = 0; i <= tamanho1 - tamanho2; i++) {   // Irá percorrer a str1 a partir do ínicio até o ponto em que a str2 não
+                                                   // cabe mais em str1
+        encontrado = 1;
+        for (j = 0; j < tamanho2; j++) {
+            if (str1[i+j] != str2[j]) {
+                encontrado = 0;
+                break;
+            }
+        }
+        if (encontrado) {
+            break;
+        }
+    }
+    
+    if (encontrado) {
+        printf("\"%s\" esta contida em \"%s\"\n", str2, str1);
+    } 
+    else {
+        printf("\"%s\" nao esta contida em \"%s\"\n", str2, str1);
+    }
+                    //REVISAR ESTE EXERCÍCIO DEPOIS
+}
+*/
+
+/*9 - Construa um programa que leia duas strings do teclado. Imprima uma mensagem
+informando quantas vezes a segunda string lida está contida dentro da primeira.*/
+
+int main () {
+    char str1[30], str2[20];
+    int i, j, tamanho1, tamanho2, encontrado = 0, quant = 0;
+
+    printf("Digite uma frase: ");
+    gets(str1);
+    tamanho1 = strlen(str1);
+
+    printf("Agora digite outra frase: ");
+    gets(str2);
+    tamanho2 = strlen(str2);
+
+    for (i = 0; i <= tamanho1 - tamanho2; i++) {
+        encontrado = 1;
+        for (j = 0; j < tamanho2; j++) {
+            if (str1[i + j] != str2[j]) {
+                encontrado = 0;
+                break;
+            }
+        }
+        if (encontrado) {
+            quant++;
+            j = 0;
+        }
+        else {
+            j = 0;
+        }
+    }
+
+    if (encontrado) {
+        printf("A string \'%s\' aparece %d na string \'%s\'!", str2, quant, str1);
+    }
+    else {
+        printf("A string \'%s\' nao aparece na string \'%s\'", str2, str1);
+    }
+}
+
+/*Testei usando a palavra Banana e a substring ana, funcionou, porém algumas palavras não funcionam...*/

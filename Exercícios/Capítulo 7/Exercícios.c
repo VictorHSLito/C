@@ -266,7 +266,7 @@ informando se a segunda string lida está contida dentro da primeira.*/
 /*9 - Construa um programa que leia duas strings do teclado. Imprima uma mensagem
 informando quantas vezes a segunda string lida está contida dentro da primeira.*/
 
-int main () {
+/*int main () {
     char str1[30], str2[20];
     int i, j, tamanho1, tamanho2, encontrado = 0, quant = 0;
 
@@ -302,5 +302,81 @@ int main () {
         printf("A string \'%s\' nao aparece na string \'%s\'", str2, str1);
     }
 }
+*/
 
-/*Testei usando a palavra Banana e a substring ana, funcionou, porém algumas palavras não funcionam...*/
+
+/*Testei usando a palavra Banana e a substring ana, funcionou, porém algumas palavras não funcionam*/
+
+/*10 - Escreva um programa que leia uma string do teclado e converta todos os seus
+caracteres em maiúscula. Dica: subtraia 32 dos caracteres cujo código ASCII está
+entre 97 e 122.*/
+
+/*int main () {
+    char str[20];
+    int i;
+
+    printf("Digite uma frase: ");
+
+    gets(str);
+
+    for (i = 0; str[i] != '\0'; i++) {
+        if (str[i] == ' ' || str[i] == '\n') {
+            continue;
+        }
+        else {
+            str[i] = str[i] - 32;
+        }
+    }
+
+    printf("%s\n", str);
+}
+*/
+
+/*11 - Escreva um programa que leia uma string do teclado e converta todos os seus caracteres
+em minúscula. Dica: some 32 dos caracteres cujo código ASCII está entre
+65 e 90.*/
+
+/*int main () {
+    char str[20];
+    int i;
+
+    printf("Digite algo: ");
+
+    gets(str);
+
+    for (i = 0; str[i] != '\0'; i++) {
+        if (str[i] == ' ' || str[i] == '\n') {
+            continue;
+        }
+        else {
+            str[i] = str[i] + 32;
+        }
+    }
+
+    printf("%s\n", str);
+}
+*/
+
+/*12 - Escreva um programa que leia o nome e o valor de determinada mercadoria de
+uma loja. Sabendo que o desconto para pagamento à vista é de 10% sobre o valor
+total, calcule o valor a ser pago à vista. Escreva o nome da mercadoria, o valor
+total, o valor do desconto e o valor a ser pago à vista.*/
+
+int main () {
+    char str[20];
+    float valor, desconto, final;
+
+    printf("Digite o nome do produto: ");
+    gets(str);
+
+    printf("Agora digite o valor do produto: ");
+    scanf("%f", &valor);
+
+    printf("O pagamento a vista tem 10%% de desconto\n"); // Repetir o "%" para aparecer no print
+
+    desconto = 9.0/10;
+    final = valor*desconto;
+
+    printf("Nome do produto: %s\nValor total do produto: %f\nValor do desconto: %f\nValor pago a vista: %f", str, valor, desconto, final);
+}
+

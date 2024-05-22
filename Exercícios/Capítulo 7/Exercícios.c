@@ -362,7 +362,7 @@ uma loja. Sabendo que o desconto para pagamento à vista é de 10% sobre o valor
 total, calcule o valor a ser pago à vista. Escreva o nome da mercadoria, o valor
 total, o valor do desconto e o valor a ser pago à vista.*/
 
-int main () {
+/*int main () {
     char str[20];
     float valor, desconto, final;
 
@@ -379,4 +379,65 @@ int main () {
 
     printf("Nome do produto: %s\nValor total do produto: %f\nValor do desconto: %f\nValor pago a vista: %f", str, valor, desconto, final);
 }
+*/
+
+/*13 - Escreva um programa que recebe uma string S e dois valores inteiros não negativos
+i e j. Em seguida, imprima os caracteres contidos no segmento que vai de i a j
+da string S.*/
+
+/*int main () {
+    char str[20];
+    int i, j, aux;
+
+    printf("Digite uma frase: ");
+
+    gets(str);
+
+    printf("Agora digite dois numeros naturais: ");
+
+    scanf("%d", &i);
+    scanf("%d", &j);
+
+    if (j > i) {
+        for (aux = i; aux < j; aux++) {
+        printf("%c ", str[aux]);
+        }
+    }
+    
+    else {
+        for (aux = j; aux < i; aux ++) {
+            printf("%c ", str[aux]);
+        }
+    }
+}
+*/
+
+/*14 - O código de César é uma das técnicas de criptografia mais simples e conhecidas.
+É um tipo de substituição no qual cada letra do texto é substituída por outra,
+que se apresenta n posições após ela no alfabeto. Por exemplo, com uma troca de
+três posições, a letra A seria substituída por D, B se tornaria E e assim por diante.
+Escreva um programa que faça uso desse código de César para três posições. Entre
+com uma string e imprima a string codificada. Exemplo:
+String: a ligeira raposa marrom saltou sobre o cachorro cansado
+Nova string: d oljhlud udsrvd pduurp vdowrx vreuh r fdfkruur fdqvdgr*/
+
+int main () {
+    char str[100];
+    int i;
+
+    printf("Digite uma frase: ");
+
+    gets(str);
+
+    printf("A string digitada foi: %s\n", str);
+
+    printf("A string codificada eh: ");
+    for (i = 0; str[i] != '\0'; i++) {
+        if (str[i] != ' ') {
+        str[i] = str[i] + 3;
+        }
+        printf("%c", str[i]);
+    }
+}
+
 

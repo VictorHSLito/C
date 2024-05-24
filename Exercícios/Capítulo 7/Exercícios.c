@@ -421,7 +421,7 @@ com uma string e imprima a string codificada. Exemplo:
 String: a ligeira raposa marrom saltou sobre o cachorro cansado
 Nova string: d oljhlud udsrvd pduurp vdowrx vreuh r fdfkruur fdqvdgr*/
 
-int main () {
+/*int main () {
     char str[100];
     int i;
 
@@ -439,5 +439,29 @@ int main () {
         printf("%c", str[i]);
     }
 }
+*/
 
+/*15 - Escreva um programa que leia duas strings e as imprima em ordem alfabética, a
+ordem em que elas apareceriam em um dicionário.*/
+
+int main(){
+    char palavra1[50], palavra2[50];
+    int i;
+    printf("Digite uma palavra: ");
+    fgets(palavra1, 50, stdin);
+    printf("Agora digite outra palavra: ");
+    fgets(palavra2, 50, stdin);
+    
+    for(i = 0; palavra1[i] != '\0'; i++){
+        if(palavra1[i] < palavra2[i]){
+            printf("\n%s%s", palavra1, palavra2);
+            break;
+        }
+        else if(palavra1[i] > palavra2[i]){
+            printf("\n%s%s", palavra2, palavra1);
+            break;
+        }
+    }
+    return 0;
+}
 

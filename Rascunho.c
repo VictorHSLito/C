@@ -279,7 +279,7 @@ equivalente ao número 9*/
 /*Como o tipo short int ocupa 16 bits, dois bytes ficaria +/- assim na memória do computador:
 [0 0 0 0 0 1 1 0] [0 0 0 0 1 0 0 1]
      1º Byte            2º Byte
-Como unsigned char c ocupa apenas 1 byte, ele lê o byte menos significativo de t.x
-que no caso é o 2º Byte, que equivale a 9, por isso no printf ele imprime 9. E quando é atribuido
-o valor de 69 para o unsigned char c, ele também muda o valor de x.*/
+Como unsigned char c ocupa apenas 1 byte, ele lê o byte menos significativo de t.x (O byte mais significativo, geralmente
+é o byte mais a esquerda, no caso o 1º Byte.) que no caso é o 2º Byte, que equivale a 9, por isso no printf ele imprime 9.
+E quando é atribuido o valor de 69 para o unsigned char c, ele também muda o valor de x.*/
 

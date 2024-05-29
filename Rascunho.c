@@ -255,7 +255,7 @@ int main (void) {
 os seus elementos, enquanto a estrutura UNION reserva espaço de memória para o seu maior elemento
 e compartilha essa memória com os demais.*/
 
-union tipo {
+/*union tipo {
     short int x;
     unsigned char c;
 };
@@ -270,6 +270,7 @@ int main(void) {
     printf("c = %d\n", t.c);
     return 0;
 }
+*/
 
 /*Nesse exemplo, a variável x é do tipo short int e ocupa 16 bits (dois bytes) de memória.
 Já a variável c é do tipo unsigned char e ocupa os oito primeiros bits (um byte)
@@ -283,3 +284,75 @@ Como unsigned char c ocupa apenas 1 byte, ele lê o byte menos significativo de 
 é o byte mais a esquerda, no caso o 1º Byte.) que no caso é o 2º Byte, que equivale a 9, por isso no printf ele imprime 9.
 E quando é atribuido o valor de 69 para o unsigned char c, ele também muda o valor de x.*/
 
+// Estrutura ENUM
+
+enum semana {Domgingo, Segunda, Terca, Quarta, Quinta, Sabado};
+
+/*Uma enumeração pode ser vista como uma lista de constantes, em que cada constante
+possui um nome significativo. A ideia básica por trás da enumeração é criar
+apenas um tipo de dado que contenha várias constantes, e uma variável desse tipo só
+poderá receber como valor uma dessas constantes.*/
+
+/*int main () {
+    enum semana s1, s2, s3;
+    s1 = Segunda;
+    s2 = Terca;
+    s3 = s1 + s2;
+    printf("Domingo = %d\n", Domgingo);  //Para o compilador, cada uma das constantes é representada por um valor inteiro, e o valor da primeira constante
+    printf("Segunda = %d\n", s1);        //da enumeração é 0. Desse modo, uma enumeração pode ser usada em qualquer expressão válida com inteiros
+    printf("Terca = %d\n", s2);
+    printf("Quarta = %d\n", s3);
+    return 0;
+}
+*/
+
+/*enum escapes {retrocesso = '\b', tabulacao = '\t', quebra_linha = '\n'};
+
+int main () {
+    enum escapes n = quebra_linha;
+    printf("Teste %c de %c Escrita", n, n);
+}
+*/
+// Comando TYPEDEF
+
+/*O comando typedef crie um novo nome para um tipo de dado já existente*/
+
+/*typedef int inteiro;
+
+int main () {
+    int x = 10;
+    inteiro y = 20;
+    y = y + x;
+    printf("Soma = %d", y);
+    return 0;
+}
+*/
+
+typedef unsigned int positivos[5];
+
+int main () {
+    positivos valores;
+    int i;
+    for (i = 0; i < 5; i++) {
+        printf("Digite o valor de valores[%d]: ", i);
+        scanf("%d", &valores[i]);
+    }
+
+    for (i = 0; i < 5; i++) {
+        printf("Valor de valores[%d]: %d\n", i, valores[i]);
+    }
+}
+
+/*Diferenças entre scanf(), gets() e fgets():
+Scanf() -> A função scanf lê apenas strings digitadas sem espaços, em outras palavras, apenas palavras.
+No caso de ter sido digitada uma frase (uma sequência de caracteres contendo espaços), apenas os caracteres
+digitados antes do primeiro espaço encontrado serão armazenados na string Os caracteres que ultrapassam o tamanho da largura
+determinado são descartados pela função scanf(), mas continuam no buffer do teclado, por esse motivo é necessário limpar o buffer
+
+Gets() -> A função gets faz a leitura do teclado considerando todos os caracteres digitados, incluindo os espaços
+até encontrar uma tecla enter.
+
+Fgets() -> A função fgets é similar a função gets, ela lê a strings do teclado até que um caracter de nova linha (enter), seja encontrado.
+A principal diferença entre gets e fgets é que fgets() armazena tudo o que for digitado, incluindo o comando de enter, além disso, diferentemente da função gets(),
+a função fgets() lê a string até que um caractere de nova linha seja lido ou “tamanho-1” caracteres tenham sido lidos. Isso evita o estouro do buffer,
+que ocorre quando se tenta ler algo maior do que pode ser armazenado na string. Portanto, é mais seguro usar a função fgets(). */

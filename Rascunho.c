@@ -197,3 +197,89 @@ ser 0s ou 1s) nos lugares vagos.*/
     }
 }
 */
+
+// Estrutura Struct
+
+/*struct cadastro {
+    char nome[50];
+    int idade; 
+    char rua[50];
+    int numero;
+};
+
+int main (void) {
+    int i = 0;
+    struct cadastro c[4];
+    printf("Digite o nome, idade, rua e numero para 4 pessoas:\n");
+    for (i = 0; i < 4; i++) {
+        fgets(c[i].nome, sizeof(c[i].nome), stdin);
+        scanf("%d", &c[i].idade);
+        fgets(c[i].rua, sizeof(c[i].rua), stdin);
+        scanf("%d", &c[i].numero);
+    }
+    system("pause");
+    return 0;
+}*/
+
+// Estruturas aninhadas
+
+/*struct endereco {
+    char rua[50];
+    int numero;
+};
+
+struct cadastro {
+    char nome[50];
+    int idade;
+    struct endereco ender;
+};
+
+int main (void) {
+    struct cadastro c;
+    fgets(c.nome, sizeof(c.nome), stdin);
+    scanf("%d", &c.idade);
+    fgets(c.ender.rua, sizeof(c.ender.rua), stdin);
+    scanf("%d", &c.ender.numero);
+    return 0;
+}
+*/
+
+// Estrutura Union
+
+/*union tipo {
+    int idade;
+    char nome [50];
+};*/
+
+/*A diferença entre struct e union é que a estrutura STRUCT reserva espaço de memória para todos
+os seus elementos, enquanto a estrutura UNION reserva espaço de memória para o seu maior elemento
+e compartilha essa memória com os demais.*/
+
+union tipo {
+    short int x;
+    unsigned char c;
+};
+
+int main(void) {
+    union tipo t;
+    t.x = 1545;
+    printf("x = %d\n", t.x);
+    printf("c = %d\n", t.c);
+    t.c = 69;
+    printf("x = %d\n", t.x);
+    printf("c = %d\n", t.c);
+    return 0;
+}
+
+/*Nesse exemplo, a variável x é do tipo short int e ocupa 16 bits (dois bytes) de memória.
+Já a variável c é do tipo unsigned char e ocupa os oito primeiros bits (um byte)
+de x. Quando atribuímos o valor 1545 à variável x, a variável c recebe a porção de x
+equivalente ao número 9*/
+
+/*Como o tipo short int ocupa 16 bits, dois bytes ficaria +/- assim na memória do computador:
+[0 0 0 0 0 1 1 0] [0 0 0 0 1 0 0 1]
+     1º Byte            2º Byte
+Como unsigned char c ocupa apenas 1 byte, ele lê o byte menos significativo de t.x
+que no caso é o 2º Byte, que equivale a 9, por isso no printf ele imprime 9. E quando é atribuido
+o valor de 69 para o unsigned char c, ele também muda o valor de x.*/
+

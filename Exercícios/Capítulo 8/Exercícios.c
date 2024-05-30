@@ -98,7 +98,7 @@ int main () {
 e leia uma estrutura Retângulo e um Ponto, e informe se esse ponto está ou não
 dentro do retângulo.*/
 
-struct ponto {
+/*struct ponto {
     int x, y;
 };
 
@@ -127,4 +127,46 @@ int main () {
     else {
         printf("O ponto digitado nao esta no retangulo");
     }
+}
+*/
+
+/*6 - Crie uma estrutura representando um aluno de uma disciplina. Essa estrutura
+deve conter o número de matrícula do aluno, seu nome e as notas de três provas.
+Agora, escreva um programa que leia os dados de cinco alunos e os armazena nessa
+estrutura. Em seguida, exiba o nome e as notas do aluno que possui a maior média
+geral dentre os cinco.*/
+
+struct aluno {
+    int matricula;
+    char nome [50];
+    float nota1, nota2, nota3, media;
+};
+
+int main () {
+    struct aluno a[5];
+    int i, aux = 0;
+    float maior;
+
+    for (i = 0; i < 5; i++) {
+        printf("Matricula Aluno [%d]: ", i);
+        scanf("%d", &a[i].matricula);
+        setbuf(stdin, NULL);
+        printf("Nome Aluno [%d]: ", i);
+        fgets(a[i].nome, sizeof(a[i].nome), stdin);
+        setbuf(stdin, NULL);
+        printf("Notas do Aluno [%d]: ", i);
+        scanf("%f%f%f", &a[i].nota1, &a[i].nota2, &a[i].nota3);
+        setbuf(stdin, NULL);
+        a[i].media = (a[i].nota1 + a[i].nota2 + a[i].nota3)/3.0;
+    }
+
+    maior = a[0].media;
+    for (i = 1; i < 5; i++) {
+        if (a[i].media > maior) {
+            maior = a[i].media;
+            aux = i;
+        }
+    }
+    printf("O aluno com maior media foi %s, com media %f e notas: %f; %f; %f", a[aux].nome, a[aux].media, a[aux].nota1, a[aux].nota2, a[aux].nota3);
+    return 0;
 }

@@ -136,7 +136,7 @@ Agora, escreva um programa que leia os dados de cinco alunos e os armazena nessa
 estrutura. Em seguida, exiba o nome e as notas do aluno que possui a maior média
 geral dentre os cinco.*/
 
-struct aluno {
+/*struct aluno {
     int matricula;
     char nome [50];
     float nota1, nota2, nota3, media;
@@ -169,4 +169,48 @@ int main () {
     }
     printf("O aluno com maior media foi %s, com media %f e notas: %f; %f; %f", a[aux].nome, a[aux].media, a[aux].nota1, a[aux].nota2, a[aux].nota3);
     return 0;
+}
+*/
+
+/*7 - Crie uma estrutura representando uma hora. Essa estrutura deve conter os campos
+hora, minuto e segundo. Agora, escreva um programa que leia um vetor de cinco
+posições dessa estrutura e imprima a maior hora.*/
+
+struct hora {
+    int hora, minutos, segundos;
+};
+
+int main () {
+    struct hora h[5];
+    int i, maior_hora, maior_minuto, maior_segundos, aux = 0;
+    printf("Digite 5 horarios diferentes, no seguinte formato hh:mm:ss\n");
+    for (i = 0; i < 5; i++) {
+        printf("Horario [%d]: ", i+1);
+        scanf("%d %d %d", &h[i].hora, &h[i].minutos, &h[i].segundos);
+    }
+    maior_hora = h[0].hora;
+    maior_minuto = h[0].minutos;
+    maior_segundos = h[0].segundos;
+
+    for (i = 1; i < 5; i++) {
+        if (h[i].hora > maior_hora) {
+            maior_hora = h[i].hora;
+            aux = i;
+        }
+        else if (h[i].hora == maior_hora) {
+            if (h[i].minutos > h[aux].minutos) {
+                aux = i;
+                maior_minuto = h[aux].minutos;
+            }
+            
+        }
+        else if (h[i].segundos == maior_segundos) {
+            if (h[i].segundos > h[aux].segundos) {
+                aux = i;
+                maior_segundos = h[aux].segundos;
+            }
+        }
+    }
+
+    printf("A maior hora digitada foi a de %d:%d:%d", h[aux].hora, h[aux].minutos, h[aux].segundos);
 }

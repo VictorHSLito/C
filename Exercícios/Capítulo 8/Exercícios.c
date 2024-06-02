@@ -176,7 +176,7 @@ int main () {
 hora, minuto e segundo. Agora, escreva um programa que leia um vetor de cinco
 posições dessa estrutura e imprima a maior hora.*/
 
-struct hora {
+/*struct hora {
     int hora, minutos, segundos;
 };
 
@@ -213,4 +213,49 @@ int main () {
     }
 
     printf("A maior hora digitada foi a de %d:%d:%d", h[aux].hora, h[aux].minutos, h[aux].segundos);
+}
+*/
+
+/*8 - Crie uma estrutura capaz de armazenar o nome e a data de nascimento de uma
+pessoa. Agora, escreva um programa que leia os dados de seis pessoas. Calcule e
+exiba os nomes da pessoa mais nova e da mais velha.*/
+
+typedef struct pessoa {
+    char nome[50];
+    int dia, mes, ano;
+} p;
+
+int main () {
+    p pessoa[6];
+    int i, aux1, aux2, maior, menor;
+
+    printf("Digite o nome de 6 pessoas e a sua respectiva data de nascimento\n");
+
+    for (i = 0; i < 6; i++) {
+        printf("Nome: ");
+        fgets(pessoa[i].nome, sizeof(pessoa[i].nome), stdin);
+        setbuf(stdin, NULL);
+        printf("Data de nascimento [dd/mm/aa]\n");
+        scanf("%d%d%d", &pessoa[i].dia, &pessoa[i].mes, &pessoa[i].ano);
+        setbuf(stdin, NULL);
+    }
+
+    maior = menor = pessoa[0].ano;
+
+    for (i = 1; i < 6; i++) {
+        if (pessoa[i].ano > menor) {
+            menor = pessoa[i].ano;
+            aux1 = i;
+        }
+    }
+
+    for (i = 1; i < 6; i++) {
+        if (pessoa[i].ano < maior) {
+            maior = pessoa[i].ano;
+            aux2 = i;
+        }
+    }
+
+printf("Pessoa mais velha:\nNome: %sData de Nascimento: %d/%d/%d\n", pessoa[aux2].nome, pessoa[aux2].dia, pessoa[aux2].mes, pessoa[aux2].ano);
+printf("Pessoa mais nova:\nNome: %sData de Nascimento: %d/%d/%d", pessoa[aux1].nome, pessoa[aux1].dia, pessoa[aux1].mes, pessoa[aux1].ano);
 }

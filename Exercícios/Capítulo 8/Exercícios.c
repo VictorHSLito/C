@@ -220,7 +220,7 @@ int main () {
 pessoa. Agora, escreva um programa que leia os dados de seis pessoas. Calcule e
 exiba os nomes da pessoa mais nova e da mais velha.*/
 
-typedef struct pessoa {
+/*typedef struct pessoa {
     char nome[50];
     int dia, mes, ano;
 } p;
@@ -258,4 +258,76 @@ int main () {
 
 printf("Pessoa mais velha:\nNome: %sData de Nascimento: %d/%d/%d\n", pessoa[aux2].nome, pessoa[aux2].dia, pessoa[aux2].mes, pessoa[aux2].ano);
 printf("Pessoa mais nova:\nNome: %sData de Nascimento: %d/%d/%d", pessoa[aux1].nome, pessoa[aux1].dia, pessoa[aux1].mes, pessoa[aux1].ano);
+}
+*/
+
+/*9 - Crie uma estrutura representando um atleta. Essa estrutura deve conter o nome
+do atleta, seu esporte, idade e altura. Agora, escreva um programa que leia os
+dados de cinco atletas. Calcule e exiba os nomes do atleta mais alto e do mais
+velho.*/
+
+/*struct atleta {
+    char nome[50], esporte[20];
+    int idade;
+    float altura;
+};  
+
+int main () {
+    struct atleta a[5];
+    int i, maior, mais_velho, aux1, aux2;
+    
+    printf("Cadastre 5 atletas:\n");
+
+    for (i = 0; i < 5; i++) {
+        printf("Nome do atleta [%d]: ", i+1);
+        fgets(a[i].nome, sizeof(a[i].nome), stdin);
+        setbuf(stdin, NULL);
+        printf("Esporte: ");
+        scanf("%s", a[i].esporte);        
+        printf("Idade e altura: ");
+        scanf("%d %f", &a[i].idade, &a[i].altura);
+        setbuf(stdin, NULL);
+    }
+
+    maior = a[0].altura;
+    mais_velho = a[0].idade;
+
+    for (i = 1; i < 5; i++) {
+        if (a[i].idade > mais_velho) {
+            mais_velho = a[i].idade;
+            aux1 = i;
+        }
+        if (a[i].altura > maior) {
+            maior = a[i].altura;
+            aux2 = i;
+        }
+    }
+
+    printf("O atleta mais velho se chama %s, com %d anos e o mais alto se chama %s com %f de altura", a[aux1].nome, a[aux1].idade, a[aux2].nome, a[aux2].altura);
+}   
+*/
+
+/*10 - Usando a estrutura “atleta” do exercício anterior, escreva um programa que leia os
+dados de cinco atletas e os exiba por ordem de idade, do mais velho para o mais
+novo.*/
+
+struct atleta {
+    char nome[50];
+    int idade;
+};
+
+int main () {
+    struct atleta a[5];
+    int i, j, vetor[5], aux = 0;
+
+    printf("Digite o nome a e idade de 5 atletas\n");
+    for (i = 0; i < 5; i++) {
+        printf("Nome do atleta [%d]: ", i+1);
+        fgets(a[i].nome, sizeof(a[i].nome), stdin);
+        setbuf(stdin, NULL);
+        printf("Idade do atleta [%d]: ", i+1);
+        scanf("%d", &a[i].idade);
+        setbuf(stdin, NULL);
+    }
+
 }

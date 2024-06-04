@@ -317,8 +317,8 @@ struct atleta {
 };
 
 int main () {
-    struct atleta a[5];
-    int i, j, vetor[5], aux = 0;
+    struct atleta a[5], temp;
+    int i, j;
 
     printf("Digite o nome a e idade de 5 atletas\n");
     for (i = 0; i < 5; i++) {
@@ -330,4 +330,17 @@ int main () {
         setbuf(stdin, NULL);
     }
 
+    for (i = 0; i < 4; i++) {
+        for (j = i + 1; j < 5; j++) {
+            if (a[i].idade < a[j].idade) {
+                temp = a[i];
+                a[i] = a[j];
+                a[j] = temp;
+            }
+        }
+    }
+
+    for (i = 0; i < 5; i++) {
+        printf("Nome: %sIdade: %d\n", a[i].nome, a[i].idade);
+    }
 }

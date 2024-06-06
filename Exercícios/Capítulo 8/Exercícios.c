@@ -311,7 +311,7 @@ int main () {
 dados de cinco atletas e os exiba por ordem de idade, do mais velho para o mais
 novo.*/
 
-struct atleta {
+/*struct atleta {
     char nome[50];
     int idade;
 };
@@ -342,5 +342,116 @@ int main () {
 
     for (i = 0; i < 5; i++) {
         printf("Nome: %sIdade: %d\n", a[i].nome, a[i].idade);
+    }
+}
+*/
+
+/*11 - Escreva um programa que contenha uma estrutura representando uma data válida.
+Essa estrutura deve conter os campos dia, mês e ano. Em seguida, leia duas datas
+e armazene nessa estrutura. Calcule e exiba o número de dias que decorreram
+entre as duas datas.*/
+
+/*struct data {
+    int dia, mes, ano;
+};
+
+int main () {
+    struct data d[2];
+    int i, diferenca_ano = 0, diferenca_mes = 0, diferenca_dia = 0;
+
+    printf("Digite duas data no seguinte formato: dd/mm/aaaa\n");
+    for (i = 0; i < 2; i ++) {
+        scanf("%d/%d/%d", &d[i].dia, &d[i].mes, &d[i].ano);
+         if (d[i].dia > 32 || d[i].dia < 1) {
+        printf("Data invalida!");
+        }
+        else if (d[i].mes > 12 || d[i].mes < 1) {
+        printf("Data invalida!");
+        }
+        else if (d[i].ano < 0) {
+        printf("Data invalida!");
+        }
+    }
+
+    if (d[1].ano == d[0].ano) {
+        diferenca_ano = 0;
+        if (d[1].mes != d[0].mes) {
+            diferenca_mes = abs(d[1].mes - d[0].mes);
+        }
+        else if (d[1].dia != d[0].dia) {
+            diferenca_dia = abs(d[1].dia - d[0].dia);
+        }
+        printf("A diferenca de tempo foi de %d anos, %d meses e %d dias.", diferenca_ano, diferenca_mes, diferenca_dia);
+    }
+    else if (d[1].mes == d[0].mes) {
+        diferenca_mes = 0;
+        if (d[1].ano != d[0].ano) {
+            diferenca_ano = abs(d[1].ano - d[0].ano);
+        }
+        else if (d[1].dia != d[0].dia) {
+            diferenca_dia = abs(d[1].dia - d[0].dia);
+        }
+        printf("A diferenca de tempo foi de %d anos, %d meses e %d dias.", diferenca_ano, diferenca_mes, diferenca_dia);
+    }
+    else if (d[1].dia == d[0].dia) {
+        diferenca_dia = 0;
+        if (d[1].ano != d[0].ano) {
+            diferenca_ano = abs(d[1].ano - d[0].ano);
+        }
+        else if (d[1].mes != d[0].mes) {
+            diferenca_dia = abs(d[1].mes - d[0].mes);
+        }
+        printf("A diferenca de tempo foi de %d anos, %d meses e %d dias.", diferenca_ano, diferenca_mes, diferenca_dia);
+    }
+
+    else {
+        diferenca_ano = abs(d[1].ano - d[0].ano);
+        diferenca_mes = abs(d[1].mes - d[0].mes);
+        diferenca_dia = abs(d[1].dia - d[0].dia);
+    }
+    
+    printf("A diferenca de tempo foi de %d anos, %d meses e %d dias.", diferenca_ano, diferenca_mes, diferenca_dia);
+}
+*/
+
+/*12 - Crie uma enumeração representando os dias da semana. Agora, escreva um programa
+que leia um valor inteiro do teclado e exiba o dia da semana correspondente.*/
+
+enum Semana {Domingo, Segunda, Terca, Quarta, Quinta, Sexta, Sabado};
+
+int main () {
+    int i, valor;
+    printf("Digite um numero entre 31 e 1: ");
+    scanf("%d", &i);
+    if ( i > 31 || i < 1) {
+        printf("O numero digitado nao atende aos requisitos!");
+        return 0;
+    }
+    valor = i % 7;
+    switch (valor)
+    {
+    case 0:
+        printf("Domingo");
+        break;
+    case 1:
+        printf("Segunda");
+        break;
+    case 2:
+        printf("Terca");
+        break;
+    case 3:
+        printf("Quarta");
+        break;
+    case 4:
+        printf("Quinta");
+        break;
+    case 5:
+        printf("Sexta");
+        break;
+    case 6:
+        printf("Sabado");
+        break;
+    default:
+        break;
     }
 }

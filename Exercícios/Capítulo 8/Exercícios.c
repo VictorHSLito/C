@@ -417,7 +417,7 @@ int main () {
 /*12 - Crie uma enumeração representando os dias da semana. Agora, escreva um programa
 que leia um valor inteiro do teclado e exiba o dia da semana correspondente.*/
 
-enum Semana {Domingo, Segunda, Terca, Quarta, Quinta, Sexta, Sabado};
+/*enum Semana {Domingo, Segunda, Terca, Quarta, Quinta, Sexta, Sabado};
 
 int main () {
     int i, valor;
@@ -454,4 +454,127 @@ int main () {
     default:
         break;
     }
+}
+*/
+
+/*13 - Crie uma enumeração representando os meses do ano. Agora, escreva um programa
+que leia um valor inteiro do teclado e exiba o nome do mês correspondente e
+quantos dias ele possui.*/
+
+/*enum meses {Janeiro = 1, Fevereiro, Marco, Abril, Maio, Junho, Julho, Agosto, Setembro, Outubro, Novembro, Dezembro};
+
+int main () {
+    int i;
+
+    printf("Digite um numero entre 1 e 12: ");
+    scanf("%d", &i);
+
+    if (i > 12 || i < 1) {
+    printf("Numero invalido!");
+    return 0;
+    }
+
+    switch (i)
+    {
+    case 1:
+        printf("O mes digitado foi Janeiro e ele possui 31 dias");
+        break;
+    case 2:
+        printf("O mes digitado foi Fevereiro e ele possui 28 dias");
+        break;
+    case 3:
+        printf("O mes digitado foi Marco e ele possui 31 dias");
+        break;
+    case 4:
+        printf("O mes digitado foi Abril e ele possui 30 dias");
+        break;
+    case 5:
+        printf("O mes digitado foi Maio e ele possui 31 dias");
+        break;
+    case 6:
+        printf("O mes digitado foi Junho e ele possui 30 dias");
+        break;
+    case 7:
+        printf("O mes digitado foi Julho e ele possui 31 dias");
+        break;
+    case 8:
+        printf("O mes digitado foi Agosto e ele possui 31 dias");
+        break;
+    case 9:
+        printf("O mes digitado foi Setembro e ele possui 30 dias");
+        break;
+    case 10:
+        printf("O mes digitado foi Outubro e ele possui 31 dias");
+        break;
+    case 11:
+        printf("O mes digitado foi Novembro e ele possui 30 dias");
+        break;
+    case 12:
+        printf("O mes digitado foi Dezembro e ele possui 31 dias");
+        break;
+    default:
+        break;
+    }
+}
+*/
+
+/*14 - Crie uma enumeração representando os itens de uma lista de compras. Agora,
+escreva um programa que leia um valor inteiro do teclado e exiba o nome do item
+comprado e o seu preço.*/
+
+/*enum lista {banana = 1, maca, abacaxi, laranja, pessego, melao, tomate};
+
+int main () {
+    int i;
+
+    printf("Digite um numero entre 1 e 7: ");
+    scanf("%d", &i);
+
+    if (i > 7 || i < 1) {
+        printf("Numero invalido");
+        return 0;
+    }
+
+    switch (i) {
+    case 1:
+        printf("Banana, R$ 2,00.");
+        break;
+    case 2:
+        printf("Maca, R$ 2,40.");
+        break;
+    case 3:
+        printf("Abacaxi, R$ 4,00.");
+        break;
+    case 4:
+        printf("Laranja, R$ 1,50.");
+        break;
+    case 5:
+        printf("Pessego, R$ 3,80.");
+        break;
+    case 6:
+        printf("Melao, R$ 5,00.");
+        break;
+    case 7:
+        printf("Tomate, R$ 3,00.");
+        break;
+    default:
+        break;
+    }
+}
+*/
+
+/*15 - Crie uma união contendo dois tipos básicos diferentes. Agora, escreva um programa
+que inicialize um dos tipos dessa união e exiba em tela o valor do outro tipo.*/
+
+union exemplo {
+    int i;
+    char teste;
+};
+
+int main () {
+    union exemplo e;
+
+    e.i = 65;
+    printf("%c\n", e.teste);
+    return 0;
 }

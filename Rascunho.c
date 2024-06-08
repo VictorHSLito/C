@@ -356,3 +356,9 @@ Fgets() -> A função fgets é similar a função gets, ela lê a strings do tec
 A principal diferença entre gets e fgets é que fgets() armazena tudo o que for digitado, incluindo o comando de enter, além disso, diferentemente da função gets(),
 a função fgets() lê a string até que um caractere de nova linha seja lido ou “tamanho-1” caracteres tenham sido lidos. Isso evita o estouro do buffer,
 que ocorre quando se tenta ler algo maior do que pode ser armazenado na string. Portanto, é mais seguro usar a função fgets(). */
+
+/*Funções com passagem por valor não tem o "valor" alterado da variável, pois é passado uma "cópia" do valor da variável.
+
+Já as funções com passagem por referência é passado os endereços das variáveis na memória, o que permite que a valor da variável seja modificado
+pela função. Um grande exemplo disso é a função scanf() que quando desejamos ler algo do teclado, passamos para a função scanf() o nome da variável
+onde o dado será armazenado. Essa variável tem seu valor modificado dentro da função scanf(), e seu valor pode ser acessado no programa principal.*/

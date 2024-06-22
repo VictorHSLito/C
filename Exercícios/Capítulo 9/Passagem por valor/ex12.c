@@ -3,30 +3,36 @@ fator primo desse número.*/
 
 #include <stdio.h>
 
-int maior_primo (int numero);
-
-int main () {
-    int num, resultado;
-    printf("Digite um numero: ");
-    scanf("%d", &num);
-    resultado = maior_primo(num);
-    printf("O maior fator primo desse numero eh: %d", resultado);
+int checaPrimalidade(int n) {
+    int i, divisor = 0;
+    for(i = 1; i <= n; i++){
+        if(n % i == 0)
+            divisor++;
+        if(divisor > 2)
+            break;
+    }
+    if(divisor > 2)
+        return 0;
+    return 1;
 }
 
-int maior_primo (int numero) {
-     int fatores [30], aux = 0, maior = 0;
-     for (int i = numero - 1; i >= 2; i--) {
-        if (numero % i == 0) {
-            fatores[aux] =  i;
-            aux++;
-        }
-     }
-    maior = fatores[0];
-    for (int i = 0; i < aux; i++) {
-        printf("%d\n", fatores[i]) ;
-        if (fatores[i] > maior) {
-            maior = fatores[i];
-        }
+int maiorFatorPrimo(int valor) {
+    int fator = 1, i, aux;
+    for(i = 2; i <= valor; i++){
+        aux = checaPrimalidade(i);
+        if(aux == 1)
+            if(valor % i == 0)
+                fator = i;
+        if(i >= valor/2)
+            break;
     }
-     return maior ;
+    return fator;
+}
+
+int main(){
+    int n, maior;
+    scanf("%d", &n);
+    maior = maiorFatorPrimo(n);
+    printf("%d\n", maior);
+    return 0;
 }

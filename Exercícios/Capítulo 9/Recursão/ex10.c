@@ -17,7 +17,7 @@ int fibonacci (int n) {
 }
 
 int main () {
-    int numero = 3, resultado;
+    int numero, resultado;
     printf("Digite um numero: ");
     scanf("%d", &numero);
 

@@ -15,9 +15,9 @@ int calcula_multiplicacao (int x, int y) {
 
 
 int main () {
-    int x = 5, y = 4, resultado;
-    //printf("Digite dois numeros inteiros: ");
-    //scanf("%d %d", &x, &y);
+    int x, y, resultado;
+    printf("Digite dois numeros inteiros: ");
+    scanf("%d %d", &x, &y);
 
     resultado = calcula_multiplicacao(x, y);
     printf("Resultado: %d", resultado);

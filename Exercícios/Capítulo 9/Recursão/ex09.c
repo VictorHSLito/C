@@ -12,9 +12,9 @@ int fatorial (int n) {
 }
 
 int main () {
-    int numero = 6, resultado;
-    //printf("Digite um numero para calcular o fatorial: ");
-    //scanf("%d", &numero);
+    int numero, resultado;
+    printf("Digite um numero para calcular o fatorial: ");
+    scanf("%d", &numero);
 
     resultado = fatorial(numero);
     printf("O fatorial de %d eh %d", numero, resultado);

@@ -51,5 +51,11 @@ int main()
         printf("\n");
     }
 
+    for (int i = 0; i < num; ++i) {
+        free(matriz);
+    }
+
+    free(matriz);
+    matriz = NULL;
     return 0;
 }
